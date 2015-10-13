@@ -1,0 +1,25 @@
+# bower components
+bower_components/
+
+#log files
+*.log
+
+#eclipse
+.pydevproject
+.project
+.RData
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# IDE
+.idea
+
+#npm
+node_modules
+npm-debug.log
+coverage/
