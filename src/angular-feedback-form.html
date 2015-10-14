@@ -21,10 +21,14 @@
           </div>
         </div>
         <div class="footer">
-          <div ng-click="toggleForm(false)" class="button cancel">
+          <div ng-click="toggleForm(false)" class="button cancel"  ng-show="!feedbackForm.$submitted">
             Cancel
           </div>
-          <input type="submit" class="button submit" value="Submit" ng-class="{'disabled': !feedbackForm.$valid}" ng-disabled="!feedbackForm.$valid">
+          <input type="submit" class="button submit" value="Submit" ng-class="{'disabled': !feedbackForm.$valid}" ng-disabled="!feedbackForm.$valid"  ng-show="!feedbackForm.$submitted">
+
+          <div ng-click="toggleForm(false)" class="button close" ng-show="feedbackForm.$submitted">
+            Close
+          </div>
         </div>
       </form>
     </div>
@@ -33,4 +37,5 @@
   <div class="feedback-button" ng-click="toggleForm(true)" ng-show="!settings.showForm">
     Feedback
   </div>
+
 </div>

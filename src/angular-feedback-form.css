@@ -16,7 +16,9 @@
 .feedback .feedback-form .feedback-content {
   border: 1px solid #000;
   width: 380px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 1px solid #5A5A5A;
   box-shadow: 0 0 .5rem 0 rgba(0,0,0,.2);
 }
 
@@ -54,11 +56,11 @@
 /* Content > main */
 
 .feedback .feedback-form .feedback-content .main {
-  padding: 8px;
-  margin: 4px;
+  background: #fff;
   color: #828282;
   font-size: 14px;
   font-weight: bold;
+  padding: 8px;
 }
 
 .feedback .feedback-form .feedback-content .main input,
@@ -88,6 +90,7 @@
 
 /* Content > footer */
 .feedback .feedback-form .feedback-content .footer {
+  background: #fff;
   padding: 8px;
   text-align: right;
 }
