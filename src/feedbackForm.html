@@ -1,3 +1,36 @@
-<div class="feedback-form">
-  Feedback Form
+<div class="feedback">
+  <div class="feedback-form" ng-show="settings.showForm">
+    <div class="feedback-content">
+      <form novalidate name="feedbackForm" ng-submit="submitFunction()">
+        <div class="header">
+          <span class="title">Contact Us</span>
+          <span class="close" ng-click="toggleForm(false)">x</span>
+        </div>
+        <div class="main">
+          <div class="name">
+            <label>Name</label>
+            <input type="text" name="name" ng-model="ngModel.name" ng-class="{'error': feedbackForm.name.$error.required}" placeholder="Thomas Edison">
+          </div>
+          <div class="email">
+            <label>E-mail Address*</label>
+            <input type="text" name="email" ng-model="ngModel.email" ng-class="{'error': feedbackForm.email.$error.required}" placeholder="tommyedison@aol.com" required>
+          </div>
+          <div class="comment">
+            <label>What can we help you with?*</label>
+            <textarea name="comment" ng-model="ngModel.comment" ng-class="{'error': feedbackForm.comment.$error.required}" placeholder="Did you know I was awarded 2,332 patients wordwide?"required></textarea>
+          </div>
+        </div>
+        <div class="footer">
+          <div ng-click="toggleForm(false)" class="button cancel">
+            Cancel
+          </div>
+          <input type="submit" class="button submit" value="Submit" ng-class="{'disabled': !feedbackForm.$valid}" ng-disabled="!feedbackForm.$valid">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="feedback-button" ng-click="toggleForm(true)" ng-show="!settings.showForm">
+    Feedback
+  </div>
 </div>

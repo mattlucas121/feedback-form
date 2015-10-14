@@ -9,11 +9,14 @@
 
 
   <link rel="stylesheet" href="example.css">
+  <link rel="stylesheet" href="../src/feedbackForm.css">
   <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
   <script src="demo.js"></script>
   <script src="../src/feedbackForm.js"></script>
 </head>
 <body ng-controller="DemoController">
-  <div feedback-form=""></div>
+  <div feedback-form="" ng-model="formData" submit-function="submitForm()"></div>
+  <pre ng-bind="formData | json"></pre>
 </body>
 </html>

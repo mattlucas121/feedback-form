@@ -1,5 +1,151 @@
-.feedback-form {
+.feedback .feedback-form {
+  font-family: Lato,Avenir Next,Helvetica Neue,sans-serif;
   position: fixed;
-  bottom: 20px
+  bottom: 20px;
   right: 20px;
+  transition: 0.25s linear all;
+  opacity: 1;
+  z-index: 2;
+}
+
+.feedback .feedback-form.ng-hide {
+  opacity: 0;
+}
+
+/* Content */
+.feedback .feedback-form .feedback-content {
+  border: 1px solid #000;
+  width: 380px;
+  border-radius: 8px;
+  box-shadow: 0 0 .5rem 0 rgba(0,0,0,.2);
+}
+
+/* Content > header */
+.feedback .feedback-form .feedback-content .header {
+  background: #F8F8F8;
+  height: 18px;
+  padding: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 1px solid #5A5A5A;
+  text-align: center;
+}
+
+.feedback .feedback-form .feedback-content .header .title {
+  color: #5A5A5A;
+  font-weight: bold;
+}
+
+.feedback .feedback-form .feedback-content .header .close {
+  cursor: pointer;
+  float: right;
+  opacity: .5;
+  font-weight: 900;
+}
+
+.feedback .feedback-form .feedback-content .header .close:hover {
+  cursor: pointer;
+  float: right;
+  opacity: 1;
+  transition: all linear .1s;
+  -webkit-transition: all linear .1s;
+}
+
+/* Content > main */
+
+.feedback .feedback-form .feedback-content .main {
+  padding: 8px;
+  margin: 4px;
+  color: #828282;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.feedback .feedback-form .feedback-content .main input,
+.feedback .feedback-form .feedback-content .main textarea {
+  margin-bottom: 10px;
+  display: block;
+  width: 330px;
+  position: relative;
+  padding: .75rem .75rem;
+  background: #fff;
+  border: .09167rem solid #8a8a8a;
+  border-radius: .33333rem;
+  color: #5d5d5d;
+}
+
+.feedback .feedback-form .feedback-content .main textarea {
+  resize: none;
+  height: 140px;
+}
+
+
+.feedback .feedback-form .feedback-content .main input.error,
+.feedback .feedback-form .feedback-content .main textarea.error {
+  border: .09167rem solid #D27575;
+}
+
+
+/* Content > footer */
+.feedback .feedback-form .feedback-content .footer {
+  padding: 8px;
+  text-align: right;
+}
+
+/* Content > footer > button */
+.feedback .feedback-form .feedback-content .footer .button {
+  background: #4b4f5c;
+  border-radius: 2px;
+  border: 0;
+  box-shadow: 0 0 .5rem 0 rgba(0,0,0,.2);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  padding: 8px 12px;
+  opacity: .75;
+  transition: all linear .1s;
+  -webkit-transition: all linear .1s;
+}
+
+.feedback .feedback-form .feedback-content .footer .button.cancel {
+  background: #fff;
+  color: #15161c;
+  border: 1px solid #4b4f5c;
+}
+
+.feedback .feedback-form .feedback-content .footer .button:hover {
+  opacity: 1;
+}
+
+.feedback .feedback-form .feedback-content .footer .button.disabled {
+  opacity: .5;
+}
+
+
+/* Feedback Button */
+.feedback .feedback-button {
+  z-index: 1;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 13px;
+  color: #fff;
+  background: #4b4f5c;
+  padding: 8px 12px;
+  border-radius: 2px;
+  opacity: .75;
+  transition: all linear .2s;
+  -webkit-transition: all linear .20s;
+  box-shadow: 0 0 .5rem 0 rgba(0,0,0,.2);
+}
+
+/* Feedback Button */
+.feedback .feedback-button.ng-hide {
+  opacity: 0;
+}
+
+.feedback .feedback-button:hover {
+  opacity: 1;
 }
